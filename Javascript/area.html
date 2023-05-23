@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MID EXAM</title>
+    <link rel="stylesheet" href="area.css">
+</head>
+<body>
+    <!-- main section start here-->
+    <main>
+        <!-- code for Making card starts here -->
+        <section class="task container"> 
+            <h2 class="title"><em>Get Area of Triangle, Rhombus and Rectangle</em></h2>
+            <div class="card single_btn" style="margin: 20px;">
+                <div class="single_btn single_card">
+                    <!-- triangle -->
+                    <div class="card-top">
+                        <img
+                            style="width: 100%"
+                            src="triangle.png"
+                            alt="This image is about a triangle"
+                        />
+                        <!-- alt is nothing but a simple identifier or attribute which gives extra info about the tag -->
+                    </div>
+                    <div class="card-body">
+                        <h3>TRIANGLE</h3>
+                        <p style="color:grey ;"><b>Area(A) = 0.5 x B x H</b></p>
+                    </div>
+                    <div style="display: flex;gap: 20px; margin: 20px;">
+                        <div style="display: flex;">
+                            <p>b(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_b_triangle" value="0">
+                        </div>
+                        <div style="display: flex;">
+                            <p>h(cm)</p>
+                            <input  style="width:100%;" type="text" id="value_of_h_triangle" value="0">
+                        </div>
+                    </div>
+                    <p id="Show_result1" style="font-weight: bold;"></p>
+                    <button class="card-footer" style="background-color:black;" onclick="area_of_triangle()">CALCULATE</button>
+                </div>
+
+                <div class="single_btn single_card">
+                    <!-- rectangle -->
+                    <div class="card-top">
+                        <img
+                            style="width: 100%"
+                            src="rectangle.png"
+                            alt="This image is about a rectangle"
+                        />
+                    </div>
+                    <div class="card-body" style="padding: 75px;">
+                        <h3>RECTANGLE</h3>
+                        <p style="color:grey ;"><b>Area(A) = B x L</b></p>
+                    </div>
+                    <div style="display: flex;gap: 20px; margin: 20px;">
+                        <div style="display: flex;">
+                            <p>b(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_b_rectangle" value="0">
+                        </div>
+                        <div style="display: flex;">
+                            <p>l(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_l_rectangle" value="0">
+                        </div>
+                    </div>
+                    <p id="Show_result2" style="font-weight: bold;"></p>
+                    <button class="card-footer" style="background-color:black;" onclick="area_of_rectangle()">CALCULATE</button>
+                </div>
+
+
+              
+              
+              
+                <div class="single_btn single_card">
+                    <!-- parallelogram -->
+                    <div class="card-top">
+                        <img
+                            style="width: 100%"
+                            src="parallelogram.png"
+                            alt="This image is about a parallelogram"
+                        />
+                    </div>
+                    <div class="card-body" style="padding: 75px;">
+                        <h3>PARALLELOGRAM</h3>
+                        <p style="color:grey ;"><b>Area(A) = B x L</b></p>
+                    </div>
+                    <div style="display: flex;gap: 20px; margin: 20px;">
+                        <div style="display: flex;">
+                            <p>b(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_b_parallelogramle" value="0">
+                        </div>
+                        <div style="display: flex;">
+                            <p>l(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_l_parallelogram" value="0">
+                        </div>
+                    </div>
+                    <p id="Show_result2" style="font-weight: bold;"></p>
+                    <button class="card-footer" style="background-color:black;" onclick="area_of_parallelogram()">CALCULATE</button>
+                </div>
+              
+              
+                <div class="single_btn single_card">
+                    <!-- Rhombus -->
+                    <div class="card-top">
+                        <img
+                            style="width: 100%"
+                            src="rhombus.png"
+                            alt="This image is about a rhombus"
+                        />
+                    </div>
+                    <div class="card-body" style="padding: 75px;">
+                        <h3>RHOMBUS</h3>
+                        <p style="color:grey ;"><b>Area(A) = 0.5*d1*d2</b></p>
+                    </div>
+                    <div style="display: flex;gap: 20px; margin: 20px;">
+                        <div style="display: flex;">
+                            <p>b(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_b_rhombus" value="0">
+                        </div>
+                        <div style="display: flex;">
+                            <p>l(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_l_rhombus" value="0">
+                        </div>
+                    </div>
+                    <p id="Show_result2" style="font-weight: bold;"></p>
+                    <button class="card-footer" style="background-color:black;" onclick="area_of_rhombus()">CALCULATE</button>
+                </div>
+
+                
+
+           
+           
+           
+            </div>
+        </section>
+        <!-- code for Making card ends here -->
+    </main>
+
+    <!-- js code starts here -->
+    <script>
+        //for triangle
+        let b_of_triangle,h_of_triangle;
+        function area_of_triangle()
+        {
+            b_of_triangle = document.getElementById("value_of_b_triangle").value;
+            h_of_triangle = document.getElementById("value_of_h_triangle").value;
+            document.getElementById("Show_result1").innerHTML = "Area of triangle is " + 0.5*b_of_triangle*h_of_triangle;
+        }
+        //for rectangle
+        let b_of_rectangle,l_of_rectangle;
+        function area_of_rectangle()
+        {
+            b_of_rectangle = document.getElementById("value_of_b_rectangle").value;
+            l_of_rectangle = document.getElementById("value_of_l_rectangle").value;
+            document.getElementById("Show_result2").innerHTML = "Area of rectangle is " + b_of_rectangle*l_of_rectangle;
+        }
+        //for rhombus
+        let d1_of_rhombus,d2_of_rhombus;
+        function area_of_rhombus()
+        {
+            d1_of_rhombus = document.getElementById("value_of_d1_rhombus").value;
+            d2_of_rhombus = document.getElementById("value_of_d2_rhombus").value;
+            document.getElementById("Show_result3").innerHTML = "Area of rhombus is " + 0.5*d1_of_rhombus*d2_of_rhombus;
+        }
+
+        let b_of_parallelogram,l_of_parallelogram;
+        function area_of_parallelogram()
+        {
+            b_of_parallelogram = document.getElementById("value_of_b_parallelogram").value;
+            l_of_parallelogram = document.getElementById("value_of_l_parallelogram").value;
+            document.getElementById("Show_result2").innerHTML = "Area of parallelogram is " + b_of_parallelogram*l_of_parallelogram;
+        }
+    </script>
+    <!-- js code ends here -->
+</body>
+</html>
